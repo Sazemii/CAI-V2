@@ -104,8 +104,8 @@ const ContactModal = ({ isOpen, onClose, formType }) => {
             </div>
             <h3>Thank you!</h3>
             <p>
-              Your message has been sent successfully. We'll get back to you
-              soon.
+              Your message has been sent successfully. We&apos;ll get back to
+              you soon.
             </p>
           </div>
         ) : (

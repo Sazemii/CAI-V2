@@ -24,7 +24,8 @@ const Contact = () => {
           <div className="contact-left">
             <div className="contact-title">Contact us!</div>
             <div className="contact-subtitle">
-              We'd love to learn more about your specific needs and challenges
+              We&apos;d love to learn more about your specific needs and
+              challenges
             </div>
           </div>
           <div className="contact-right">

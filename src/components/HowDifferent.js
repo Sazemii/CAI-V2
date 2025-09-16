@@ -34,7 +34,7 @@ const HowDifferent = () => {
       <div className="floating-element floating-element-4"></div>
       <div className="floating-element floating-element-5"></div>
       <div className="how-different-header" ref={headerRef}>
-        How We're Different?
+        How We&apos;re Different?
       </div>
       <div className="how-different-container" ref={cardsRef}>
         {differentiators.map((item, index) => (
