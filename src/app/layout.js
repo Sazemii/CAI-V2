@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
-        
+
         {/* Iframe detection script */}
         <Script id="iframe-detection" strategy="afterInteractive">
           {`
@@ -58,8 +58,14 @@ export default function RootLayout({ children }) {
             })();
           `}
         </Script>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" strategy="afterInteractive" />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" strategy="afterInteractive" />
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
