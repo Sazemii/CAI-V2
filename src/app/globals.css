@@ -24,6 +24,26 @@ body {
   line-height: 1.5;
 }
 
+/* Iframe embedding styles */
+body.iframe-embedded {
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+html.iframe-embedded {
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.iframe-embedded .landing-page {
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .landing-page {
   display: flex;
   flex-direction: column;

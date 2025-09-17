@@ -28,6 +28,36 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
+        
+        {/* Iframe detection script */}
+        <Script id="iframe-detection" strategy="afterInteractive">
+          {`
+            (function() {
+              function detectIframe() {
+                if (window !== window.top) {
+                  // We're in an iframe
+                  document.documentElement.classList.add('iframe-embedded');
+                  document.body.classList.add('iframe-embedded');
+                  
+                  // Remove default scroll from parent and let content handle it
+                  document.body.style.overflow = 'hidden';
+                  document.documentElement.style.overflow = 'hidden';
+                  
+                  // Set height to exactly fit viewport
+                  document.body.style.height = '100vh';
+                  document.documentElement.style.height = '100vh';
+                }
+              }
+              
+              // Run on load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', detectIframe);
+              } else {
+                detectIframe();
+              }
+            })();
+          `}
+        </Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" strategy="afterInteractive" />
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" strategy="afterInteractive" />
       </body>
